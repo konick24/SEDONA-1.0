@@ -14,13 +14,13 @@
             </a>
             <ul class="navigation-list">
                 <li class="navigation-item">
-                    <a class="navigation-link">Главная</a>
+                    <a class="navigation-link" href="index.html">Главная</a>
                 </li>
                 <li class="navigation-item">
                     <a href="#" class="navigation-link">О Седоне</a>
                 </li>
                 <li class="navigation-item">
-                    <a href="hotel.html" class="navigation-link">Гостиницы</a>
+                    <a class="navigation-link">Гостиницы</a>
                 </li>
             </ul>
             <ul class="navigation-list navigation-user">
@@ -56,12 +56,74 @@
                 </li>
             </ul>
         </header>
-        <section class="search-filter">
-            <form class=""
+        <section class="search-hotel-products">
+            <h2 class="visually-hidden">Список гостиниц с фильтрами</h2>
+            <form class="hotel-filter" action="https://echo.htmlacademy.ru/" methot="post">
+                <fieldset class="hotel-filter-group">
+                    <legend class="filter-title">Инфраструктура:</legend>
+                    <ul class="filter-list">
+                        <li class="filter-item">
+                            <label class="filter-item-title">
+                                <input class="visually-hidden filter-item-input" type="checkbox" name="pool" checked>
+                                <span class="filter-label">Бассейн</span>
+                            </label>
+                        </li>
+                        <li class="filter-item">
+                            <label class="filter-item-title">
+                                <input class="visually-hidden filter-item-input" type="checkbox" name="parking" checked>
+                                <span class="filter-label">Парковка</span>
+                            </label>
+                        </li>
+                        <li class="filter-item">
+                            <label class="filter-item-title">
+                                <input class="visually-hidden filter-item-input" type="checkbox" name="Wi-Fi">
+                                <span class="filter-label">Wi-Fi</span>
+                            </label>
+                        </li>
+                    </ul>
+                </fieldset>
+                <fieldset class="hotel-filter-group">
+                    <legend class="filter-title">Тип жилья:</legend>
+                    <ul class="filter-list">
+                        <li class="filter-item">
+                            <label class="filter-item-title">
+                                <input class="visually-hidden filter-item-input" type="radio" name="product-group" value="hotel" checked>
+                                <span class="filter-label">Гостиница</span>
+                            </label>
+                        </li>
+                        <li class="filter-item">
+                            <label class="filter-item-title">
+                                <input class="visually-hidden filter-item-input" type="radio" name="product-group" value="motel">
+                                <span class="filter-label">Мотель</span>
+                            </label>
+                        </li>
+                        <li class="filter-item">
+                            <label class="filter-item-title">
+                                <input class="visually-hidden filter-item-input" type="radio" name="product-group" value="apartaments">
+                                <span class="filter-label">Апартаменты</span>
+                            </label>
+                        </li>
+                    </ul>
+                </fieldset>
+                <fieldset class="hotel-filter-group">
+                    <legend class="price-title">Стоимость, ₽:</legend>
+                    <label class="price-label">от
+                        <input class="data-input" type="number" name="price-min" placeholder="от">
+                    </label>
+                    <label class="price-label">до
+                        <input class="data-input" type="number" name="price-max" placeholder="до">
+                    </label>
+                    <button class="range-toggle toggle-min" type="button">
+                        <span class="visually-hidden">Изменить минимальную цену</span>
+                    </button>
+                    <button class="range-toggle toggle-max" type="button">
+                        <span class="visually-hidden">Изменить максимальную цену</span>
+                    </button>
+                </fieldset>
+                <button class="button" type="submit">Применить</button>
+                <button class="button" type="reset">Сбросить</button>
+            </form>
         </section>
-        <fieldset class="">
-
-        </fieldset>
     </main>
 
     <footer class="page-footer">
