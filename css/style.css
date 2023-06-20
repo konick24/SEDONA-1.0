@@ -1,0 +1,76 @@
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url(../fonts/ptsans-400.woff2) format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: "PT sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url(../fonts/ptsans-700.woff2) format("woff2");
+  font-display: swap;
+}
+
+body {
+  font-family: "PT sans", sans-serif;
+  font-size: 18px;
+  line-height: 21px;
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.page-header {
+  color: #000000;
+  background-color: #ffffff;
+}
+
+.navigation-link {
+  font-family: "PT sans", sans-serif;
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: 700;
+  text-align: center;
+  color: #000000;
+  background-color: #ffffff;
+  text-decoration: none;
+}
+
+.main-index {
+  color: #000000;
+  background-color: #ffffff;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+}
+
+.section-title {
+  font-family: "PT sans", sans-serif;
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.section-description {
+  font-family: "PT sans", sans-serif;
+  font-size: 22px;
+  line-height: 36px;
+  text-align: center;
+}
+
+.advantages-item {
+  background: rgba(131, 179, 211, 0.12);
+}
+
+.advantages-item:not(.advantages-item-large):nth-child(even) {
+  background: rgba(131, 179, 211, 0.2);
+}
+
+.advantages-item-large {
+  color:#ffffff;
+  background-color: #83B3D3;
+}
+
+.advantages-list-inner .advantages-item
