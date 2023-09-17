@@ -29,6 +29,16 @@ body {
   color: #333333;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
 
 .button {
   color:#ffffff;
@@ -61,9 +71,13 @@ body {
 }
 
 .navigation-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
   margin: 0;
   padding: 0;
   width: 650px;
+  list-style-type: none;
 }
 
 .navigation-user {
@@ -71,6 +85,8 @@ body {
 }
 
 .navigation-link {
+  display: block;
+  padding: 20px 17px;
   font-family: "PT sans", sans-serif;
   font-size: 20px;
   line-height: 26px;
@@ -79,6 +95,11 @@ body {
   color: #000000;
   background-color: #ffffff;
   text-decoration: none;
+}
+
+.navigation-link .navigation-user {
+  min-width: 18px;
+  min-height: 17px;
 }
 
 .main-index {
@@ -126,6 +147,7 @@ body {
 .advantages-list {
   margin: 0;
   padding: 0;
+  list-style-type: none;
 }
 
 .advantages-list-inner {
@@ -170,12 +192,13 @@ body {
   text-align: center;
 }
 
-.search-hotel-title {
+.search-title {
   margin: 0;
   font-size: 30px;
   line-height: 36px;
   font-weight: 700;
   color:#000000;
+  text-transform:uppercase;
 }
 
 .search-hotel-text {
@@ -187,6 +210,17 @@ body {
 .breadcrumbs-list {
   margin: 0;
   padding: 0;
+  margin-bottom: 45px;
+  display: flex;
+  list-style-type: none;
+}
+
+.breadcrumbs-item {
+  font-size: 16px;
+}
+
+.breadcrumbs-item-link {
+  padding-right: 26px;
 }
 
 .hotel-filter-group {
@@ -217,30 +251,107 @@ body {
 .filter-list {
   margin: 0;
   padding: 0;
-}
-
-.catalog-sort {
-  display: flex;
-  justify-content: space-between;
+  list-style-type: none;
 }
 
 .hotel-sorting {
   padding: 0 72px;
 }
 
+.catalog-sort {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 44px 0;
+}
+
+.sorting-result {
+  width: 50%;
+  margin-right: 0;
+}
+
+.catalig-select{
+  width: 287px;
+  margin-right: auto;
+}
+
+.sorting-button-list {
+  list-style-type: none;
+}
+
+.view-list {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  list-style-type: none;
+}
+
+.view-link {
+  display: block;
+  width: 44px;
+  height: 44px;
+  margin-right: 8px;
+}
+
 .hotel-card-list {
   padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.hotel-card-title {
+  font-size: 24px;
+  line-height: 31px;
+}
+
+.hotel-card-link {
+  color:#000000;
+  text-decoration: none;
+}
+
+.rating-middle {
+  text-transform: uppercase;
 }
 
 .pagination-nav {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
 }
 
 .pagination-list {
   padding: 0;
   margin: 0;
   display: flex;
+  flex-wrap: wrap;
+
+  list-style-type: none;
+}
+.pagination-item {
+  margin-right: 8px;
+}
+
+.pagination-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 55px;
+  height: 55px;
+
+
+  color: #ffffff;
+  background-color: #83B3D3;
+
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+}
+
+.pagination-label {
+  margin: 0;
+  margin-right: 50px;
 }
 
 .pagination-select {
@@ -259,6 +370,7 @@ body {
   font-size: 30px;
   line-height: 36px;
   font-weight: 700;
+  text-transform: uppercase;
 }
 
 .maling-text {
@@ -276,14 +388,13 @@ body {
 }
 
 .search-hotel-title {
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 5px;
   color:#ffffff;
   font-size: 60px;
   line-height: 78px;
   font-weight: 700;
-}
-
-.breadcrumbs-item {
-  font-size: 16px;
 }
 
 .filter-title {
@@ -302,6 +413,7 @@ body {
   color: #ffffff;
   background-color: transparent;
   font-size: 18px;
+  font-family: inherit;
 }
 
 .filter-label {
@@ -319,29 +431,44 @@ body {
   text-transform: uppercase;
 }
 
-.hotel-card-title {
-  font-size: 24px;
-  line-height: 31px;
+.news-maling {
+  margin: 0;
+  padding: 0;
 }
 
-.hotel-card-link {
-  color:#000000;
-  text-decoration: none;
-}
-
-.rating-middle {
-  text-transform: uppercase;
-}
-
-.pagination-link {
-  color: #ffffff;
-  background-color: #83B3D3;
+.page-footer {
+  width: 1200px;
+  margin: 0 auto;
 }
 
 .footer-social {
-  width: 1200px;
-  margin: 0 auto;
   display: flex;
   justify-content: space-between;
+  padding: 40px 72px;
+}
 
+.footer-social-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.footer-social-item {
+  width: 36px;
+  height: 30px;
+  margin-right: 8px;
+  margin-bottom: 8px;
+}
+
+.footer-social-item:nth-child(3n) {
+  margin-right: 0;
+}
+
+.footer-number-address-tel {
+  color:#000000;
+  font-size: 40px;
+  line-height: 40px;
+  text-decoration: none;
 }
