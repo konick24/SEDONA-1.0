@@ -111,21 +111,25 @@
               </fieldset>
               <fieldset class="hotel-filter-group hotel-filter-price">
                 <legend class="filter-title">Стоимость, ₽:</legend>
-                <label class="range-label">
-                  <span class="range-title">от</span>
-                  <input class="data-input" type="number" name="price-min" placeholder="0" max=10000 step="100">
-                </label>
-                <label class="range-label">
-                  <span class="range-title">до</span>
-                  <input class="data-input" type="number" name="price-max" placeholder="9000" max="10000" step="100">
-                </label>
-                <div class="price-slider">
-                  <button class="range-toggle toggle-min" type="button">
-                    <span class="visually-hidden">Изменить минимальную цену</span>
-                  </button>
-                  <button class="range-toggle toggle-max" type="button">
-                    <span class="visually-hidden">Изменить максимальную цену</span>
-                  </button>
+                <div class="range">
+                  <label class="range-label">
+                    <span class="range-title">от</span>
+                    <input class="range-input" type="number" name="price-min" placeholder="0" max=10000 step="100">
+                  </label>
+                  <label class="range-label">
+                    <span class="range-title">до</span>
+                    <input class="range-input" type="number" name="price-max" placeholder="9000" max="10000" step="100">
+                  </label>
+                  <div class="range-slider">
+                    <div class="price-slider">
+                      <button class="range-toggle toggle-min" type="button">
+                        <span class="visually-hidden">Изменить минимальную цену</span>
+                      </button>
+                      <button class="range-toggle toggle-max" type="button">
+                        <span class="visually-hidden">Изменить максимальную цену</span>
+                      </button>
+                    </div>
+                  </div>
                 </div>
               </fieldset>
               <div class="filter-buttons">

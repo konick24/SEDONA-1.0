@@ -362,6 +362,7 @@ body {
   grid-area: img;
   width: 100%;
   height: auto;
+  object-fit: cover;
 }
 
 .hotel-card-title {
@@ -516,31 +517,51 @@ body {
   font-weight: 700;
 }
 
+.filter-label {
+  line-height: 23px;
+}
+
 .filter-title {
   font-size: 20px;
   line-height: 26px;
   font-weight: 700;
 }
 
-.filter-reset {
-  color: #ffffff;
-  background-color: transparent;
-  font-size: 18px;
+.range {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
-.data-input {
+.range-label {
+  display: grid;
+  grid-template-columns: 1fr 44px;
+}
+
+.range-input {
+  width: 100%;
+  grid-column: 1 / -1;
+  grid-row: 1 / 2;
+
   color: #ffffff;
   background-color: transparent;
   font-size: 18px;
   font-family: inherit;
 }
 
-.filter-label {
-  line-height: 23px;
-}
-
 .range-title {
   opacity: 0.3;
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+}
+
+.range-slider {
+  grid-column: 1 / -1;
+}
+
+.filter-reset {
+  color: #ffffff;
+  background-color: transparent;
+  font-size: 18px;
 }
 
 .sorting-result {
