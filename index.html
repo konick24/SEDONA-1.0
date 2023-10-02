@@ -49,12 +49,16 @@
         </div>
         <section class="advantages">
           <h2 class="visually-hidden">Преимущества</h2>
-          <p class="section-title">Седона — небольшой городок в Аризоне, заслуживающий большего!</p>
-          <p class="section-description">Рассмотрим 5 причин, по которым Седона круче, чем Гранд-Каньон!</p>
+          <div class="advantages-container">
+            <p class="section-title">Седона — небольшой городок в Аризоне, заслуживающий большего!</p>
+            <p class="section-description">Рассмотрим 5 причин, по которым Седона круче, чем Гранд-Каньон!</p>
+          </div>
           <ol class="advantages-list">
             <li class="advantages-item advantages-item-large">
-              <h3 class="advantages-title">Настоящий городок</h3>
-              <p>Седона — не аттракцион для туристов, там течёт своя жизнь</p>
+              <div class="advantages-item-container">
+                <h3 class="advantages-title">Настоящий городок</h3>
+                <p class="advantages-text">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
+              </div>
               <img class="advantages-pic" src="./images/photo-1.jpg" alt="Фото города Седона с заведениями">
               <ul class="advantages-list advantages-list-inner">
                 <li class="advantages-item">
@@ -72,8 +76,10 @@
               </ul>
             </li>
             <li class="advantages-item advantages-item-large">
-              <h3 class="advantages-title">Там есть мост дьявола</h3>
-              <p>Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
+              <div class="advantages-item-container">
+                <h3 class="advantages-title">Там есть мост дьявола</h3>
+                <p>Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
+              </div>
               <img class="advantages-pic" src="./images/photo-2.jpg" alt="Фото моста дьявола с горным пейзажем">
             </li>
             <li class="advantages-item">
@@ -94,7 +100,7 @@
           <h2 class="visually-hidden">Поиск Гостиницы</h2>
           <p class="search-title">Заинтересовались?</p>
           <p class="search-hotel-text">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-          <a class="search-button button button-secondary" href="search-hotel.html">Поиск гостиницы в Седоне</a>
+          <a class="search-button button button-secondary button-large" href="search-hotel.html">Поиск гостиницы в Седоне</a>
         </section>
         <section class="maling">
           <h2 class="maling-title">Подпишитесь на рассылку</h2>
@@ -103,7 +109,7 @@
             <p class="news-maling">
               <label class="visually-hidden" for="news-maling-email">Email</label>
               <input class="field" placeholder="Ваш e-mail" type="email" name="news-maling-email" id="news-maling-email" required>
-              <button class="button news-maling-button" type="submit">Подписаться</button>
+              <button class="button news-maling-button button-large" type="submit">Подписаться</button>
             </p>
           </form>
         </section>
