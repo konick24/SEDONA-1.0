@@ -81,6 +81,7 @@ body {
 }
 
 .navigation-link {
+  position: relative;
   display: block;
   padding: 20px 17px;
   font-family: "PT sans", sans-serif;
@@ -99,7 +100,7 @@ body {
 }
 
 .additional-menu-button {
-  width: 130px;
+  width: 160px;
   margin-left: 20px;
   line-height: 20px;
 }
@@ -227,6 +228,9 @@ body {
   background: rgba(131, 179, 211, 0.12);
   padding: 60px;
   padding-top: 184px;
+
+  background-repeat: no-repeat;
+  background-position: 50% 89px;
 }
 
 .advantages-item-inner:nth-child(even) {
@@ -254,6 +258,21 @@ body {
   order: -1;
 }
 
+.advantages-item-inner-home {
+  background-image: url(../images/main-icon/icon-1.svg);
+  background-size: 75px 72px;
+}
+
+.advantages-item-inner-food {
+  background-image: url(../images/main-icon/icon-2.svg);
+  background-size: 74px 70px;
+}
+
+.advantages-item-inner-present {
+  background-image: url(../images/main-icon/icon-3.svg);
+  background-size: 68px 76px;
+}
+
 .advantages-pic {
   grid-column: span 2;
   width: 100%;
@@ -278,6 +297,7 @@ body {
 
 .search-title {
   margin: 0;
+  margin-bottom: 29px;
   font-size: 30px;
   line-height: 36px;
   font-weight: 700;
@@ -289,12 +309,6 @@ body {
   font-size: 22px;
   line-height: 26px;
   color:#333333;
-}
-
-.search-button {
-  margin: 56px 73px 0;
-  padding: 15px 0;
-  width: 574px;
 }
 
 .breadcrumbs-list {
@@ -325,10 +339,16 @@ body {
 
 .button-large {
   font-size: 20px;
+  border-radius: 10px;
 }
 
 .icon-button {
-  position: relative;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
 }
 
 .icon-button-counter {
@@ -345,8 +365,14 @@ body {
   font-family: "PT sans", sans-serif;
   text-align: center;
 
-  top: 12px;
-  right: 5px;
+  top: 5px;
+  right: -3px;
+}
+
+.search-button {
+  margin: 56px 73px 0;
+  padding: 15px 0;
+  width: 575px;
 }
 
 .breadcrumbs-item {
@@ -591,6 +617,14 @@ body {
   background-color: #f2f2f2;
   font-family: inherit;
   font-size: 18px;
+  border-radius: 10px 0 0 10px;
+  padding: 19px 19px;
+  border: none;
+}
+
+.news-maling-button {
+  border-radius: 0 10px 10px 0;
+  border: none;
 }
 
 .main-header {
@@ -688,6 +722,7 @@ body {
   list-style-type: none;
   display: flex;
   flex-wrap: wrap;
+
 }
 
 .footer-social-item {
@@ -695,10 +730,28 @@ body {
   height: 30px;
   margin-right: 8px;
   margin-bottom: 8px;
+  place-content: center;
 }
 
 .footer-social-item:nth-child(3n) {
   margin-right: 0;
+}
+
+.footer-social-link {
+  position: relative;
+  display: block;
+  width: 42px;
+  height: 42px;
+  padding: 10px;
+}
+
+.footer-social-pic {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
 }
 
 .footer-number-address-tel {
