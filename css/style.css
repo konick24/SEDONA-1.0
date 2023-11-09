@@ -81,15 +81,22 @@ body {
 }
 
 .navigation-link {
-  position: relative;
   display: block;
-  padding: 20px 17px;
+  padding: 17px;
   font-family: "PT sans", sans-serif;
   font-size: 20px;
   line-height: 26px;
   font-weight: 700;
   text-align: center;
   color: #000000;
+  background-color: #ffffff;
+  text-decoration: none;
+}
+
+.navigation-user-link {
+  position: relative;
+  display: block;
+  padding: 21px;
   background-color: #ffffff;
   text-decoration: none;
 }
@@ -102,7 +109,6 @@ body {
 .additional-menu-button {
   width: 160px;
   margin-left: 20px;
-  line-height: 20px;
 }
 
 .main-index {
@@ -324,13 +330,15 @@ body {
   color:#ffffff;
   background-color: #83B3D3;
   border-radius: 4px;
-  padding: 8px 15px;
+  padding: 7px 15px 6px;
 
   font-family: inherit;
   font-size: 16px;
   font-weight: 700;
+  text-align: center;
   text-transform: uppercase;
   text-decoration: none;
+  line-height: 24px;
 }
 
 .button-secondary {
@@ -370,8 +378,8 @@ body {
 }
 
 .search-button {
-  margin: 56px 73px 0;
-  padding: 15px 0;
+  margin: 34px 73px 0;
+  padding: 18px 0;
   width: 575px;
 }
 
@@ -380,7 +388,27 @@ body {
 }
 
 .breadcrumbs-item-link {
-  padding-right: 26px;
+  padding: 3px 8px;
+}
+
+.breadcrumbs-item + .breadcrumbs-item {
+  position: relative;
+  margin-left: 10px;
+}
+
+.breadcrumbs-item + .breadcrumbs-item::before {
+  content: "";
+  position: absolute;
+  background: url(../images/nav-link.svg);
+  background-repeat: no-repeat;
+  top: 6px;
+  left: -7px;
+  width: 5px;
+  height: 8px;
+}
+
+.search-hotel-home {
+  position: absolute;
 }
 
 .hotel-filter-group {
@@ -419,20 +447,43 @@ body {
 }
 
 .catalog-sort {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 287px max-content;
   align-items: center;
-  justify-content: space-between;
+  gap: 80px;
   padding: 44px 0;
 }
 
 .sorting-result {
-  width: 50%;
-  margin-right: 0;
+  margin: 0;
 }
 
 .catalig-select{
+  z-index: 1;
+  position: relative;
   width: 287px;
   margin-right: auto;
+}
+
+.sorting-button {
+  display: grid;
+  grid-template-columns: 1fr 50px;
+  padding: 10px 18px;
+  padding-right: 0;
+  color: #333333;
+  border: 2px solid #e6e6e6;
+  border-radius: 4px;
+}
+
+.sorting-button::-webkit-details-marker {
+  display: none;
+}
+
+.sorting-button::after {
+  content: "";
+  background: url(../images/variant=arrow.svg);
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
 }
 
 .sorting-button-list {
