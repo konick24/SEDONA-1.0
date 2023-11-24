@@ -75,7 +75,7 @@ body {
   background-color: #68A2CA;
 }
 
-.button:focus {
+.button:focus:not(:active) {
   outline: 3px solid #615048;
   outline-offset: 0;
 }
@@ -93,7 +93,7 @@ body {
   background-color: #615048;
 }
 
-.button-secondary:focus {
+.button-secondary:focus:not(:active) {
   outline: 3px solid #83B3D3;
   outline-offset: 0;
 }
@@ -449,6 +449,12 @@ body {
 
 .breadcrumbs-item-link {
   padding: 3px 8px;
+  border-radius: 4px;
+}
+
+.breadcrumbs-item-home {
+  width: 28px;
+  height: 27px;
 }
 
 .search-icon-button {
@@ -457,6 +463,15 @@ body {
 
 .breadcrumbs-item-link:hover .search-icon-button {
   opacity: 0.6;
+}
+
+.breadcrumbs-item-link:active .search-icon-button {
+  opacity: 0.3;
+}
+
+.breadcrumbs-item-link:focus {
+  outline: 3px solid #83B3D3;
+  outline-offset: -3px;
 }
 
 .breadcrumbs-item + .breadcrumbs-item {
@@ -556,6 +571,15 @@ body {
   border-color: #83B3D3;
 }
 
+.sorting-button:active {
+  opacity: 0.3;
+}
+
+.sorting-button:focus {
+  outline: 2px solid #83B3D3;
+  outline-offset: -2px;
+}
+
 .catalog-select[open] .sorting-button::after {
   transform: rotate(180deg);
 }
@@ -626,6 +650,15 @@ body {
   border-color: #83B3D3;
 }
 
+.view-link:active {
+  border-color: #000000;
+}
+
+.view-link:focus:not(:active) {
+  outline: 2px solid #83B3D3;
+  outline-offset: -2px;
+}
+
 .view-item-active .view-link {
   border-color: #000000;
 }
@@ -659,6 +692,19 @@ body {
   width: 100%;
   height: auto;
   object-fit: cover;
+}
+
+.hotel-card-photo:hover {
+  opacity: 0.6;
+}
+
+.hotel-card-photo:active {
+  opacity: 0.3;
+}
+
+.hotel-card-photo:focus:not(:active) {
+  outline: 3px solid #83B3D3;
+  outline-offset: 0;
 }
 
 .hotel-card-title {
@@ -725,10 +771,6 @@ body {
   text-align: center;
   background-color: #f2f2f2;
   border-radius: 4px;
-}
-
-.hotel-card-item:hover {
-  box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.2);
 }
 
 .pagination {
@@ -1061,11 +1103,14 @@ body {
   fill:#68A2CA;
 }
 
-.footer-social-link:active .footer-social-pic {
+.footer-social-link:active .footer-social-pic,
+.footer-number-address-tel:active {
   opacity: 0.3;
 }
 
-.footer-social-link:focus {
+.footer-social-link:focus:not(:active),
+.footer-number-address-tel:focus:not(:active),
+.footer-sponsor-logo-link:focus:not(:active) {
   outline: 3px solid #83B3D3;
 }
 
@@ -1087,22 +1132,10 @@ body {
   color: #615048;
 }
 
-.footer-number-address-tel:active {
-  opacity: 0.3;
-}
-
-.footer-number-address-tel:focus, .footer-sponsor-logo-pic:focus {
-  outline: 3px solid #83B3D3;
-}
-
 .footer-sponsor-logo-pic:hover {
   fill: #615048;
 }
 
 .footer-sponsor-logo-pic:active {
   fill: rgba(97, 80, 72, 0.3);
-}
-
-.footer-sponsor-logo-link:focus {
-  outline: 3px solid #83B3D3;
 }
