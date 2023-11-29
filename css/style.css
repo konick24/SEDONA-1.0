@@ -103,6 +103,22 @@ body {
   border-radius: 10px;
 }
 
+.button-success {
+  background-color: #7db54f;
+}
+
+.button-success:hover {
+  background-color: #6c9e42;
+}
+
+.button-success:active {
+  background-color: #6c9e42;
+}
+
+.button-success:focus:not(:active) {
+  background-color: #6c9e42;
+}
+
 .page-header {
   color: #000000;
   background-color: #ffffff;
@@ -675,6 +691,7 @@ body {
 
 .hotel-card-item {
   display: grid;
+  position: relative;
   grid-template-columns: 1fr 26px 1fr;
   grid-template-rows: 206px;
   row-gap: 16px;
@@ -685,6 +702,33 @@ body {
     "button-more . button-chosen"
     "stars rate rate";
   padding: 20px;
+  z-index: 0;
+}
+
+.hotel-card-link {
+  grid-area: title;
+  color:#000000;
+  text-decoration: none;
+}
+
+.hotel-card-link:focus {
+  outline: none;
+}
+
+.hotel-card-link::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 160px;
+  z-index: 1;
+}
+
+.hotel-card-title {
+  font-size: 24px;
+  line-height: 31px;
+  margin: 0;
 }
 
 .hotel-card-photo {
@@ -692,31 +736,19 @@ body {
   width: 100%;
   height: auto;
   object-fit: cover;
+  order: -1;
 }
 
-.hotel-card-photo:hover {
+.hotel-card-link:hover + .hotel-card-photo {
   opacity: 0.6;
 }
 
-.hotel-card-photo:active {
+.hotel-card-link:active + .hotel-card-photo {
   opacity: 0.3;
 }
 
-.hotel-card-photo:focus:not(:active) {
-  outline: 3px solid #83B3D3;
-  outline-offset: 0;
-}
-
-.hotel-card-title {
-  grid-area: title;
-  font-size: 24px;
-  line-height: 31px;
-  margin: 0;
-}
-
-.hotel-card-link {
-  color:#000000;
-  text-decoration: none;
+.hotel-card-link:focus + .hotel-card-photo {
+  outline: 2px solid #83B3D3;
 }
 
 .hotel-card-description {
@@ -837,6 +869,15 @@ body {
   background-color: #68A2CA;
 }
 
+.pagination-item:not(.pagination-item-action) .pagination-link:active {
+  color: rgba(255, 255, 255, 0.3);
+  background-color: #68A2CA;
+}
+
+.pagination-item:not(.pagination-item-action):not(:active) .pagination-link:focus {
+  outline: 3px solid #756257;
+}
+
 .pagination-select {
   display: flex;
   align-items: center;
@@ -875,6 +916,7 @@ body {
   padding: 10px 0;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   list-style: none;
+  border-radius: 4px;
 }
 
 .select-option {
@@ -897,6 +939,15 @@ body {
 
 .select-button:hover {
   border-color:#83B3D3;
+}
+
+.select-button:active {
+  opacity: 0.3;
+}
+
+.select-button:focus:not(:active) {
+  outline: 2px solid #83B3D3;
+  outline-offset: -2px;
 }
 
 .select[open] .select-button::after {
