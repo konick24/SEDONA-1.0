@@ -602,13 +602,33 @@ body {
 
 .range-labels {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 2px 1fr;
 }
 
+.range-labels::before {
+  content: "";
+  position:relative;
+  z-index: 1;
+
+  width: 2px;
+  background-color: #ffffff;
+}
+
+.range-labels:hover::before {
+  opacity: 0.6;
+}
+
+.range-labels:focus-within::before {
+  opacity: 1;
+}
 
 .range-label {
   display: grid;
   grid-template-columns: 1fr 44px;
+}
+
+.range-label:nth-child(1) {
+  order: -1;
 }
 
 .range-title {
@@ -625,7 +645,7 @@ body {
   grid-row: 1 / 2;
   padding: 14px 43px 11px 19px;
   border: 2px solid #ffffff;
-  border-radius: 4px 0 0 4px;
+  border-radius: 4px;
 
   color: #ffffff;
   background-color: transparent;
@@ -635,16 +655,41 @@ body {
 
 .range-label:nth-child(1) .range-input {
   border-right: none;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
 }
 
 .range-label:nth-child(2) .range-input {
-  border-radius: 0 4px 4px 0;
+  border-left: none;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
 }
 
 .range-input::-webkit-outer-spin-button,
 .range-input::-webkit-inner-spin-button {
-  appearance: none;
+  -webkit-appearance: none;
   margin: 0;
+}
+
+.range-input:hover {
+  border-color: rgba(255, 255, 255, 0.6);
+}
+
+.range-input:active {
+  background-color: #756257;
+  outline: none;
+}
+
+.range-input:focus:not(:active) {
+  outline: 3px solid #81b3d2;
+  box-shadow: inset 0px 0px 0px 3px #81B3D2;
+  background-color: #756257;
+  border-color: #ffffff;
+}
+
+.range-input:not(:placeholder-shown):focus {
+  border-color: #ffffff;
+  box-shadow: none;
 }
 
 .range-slider {
@@ -670,6 +715,20 @@ body {
   cursor: pointer;
 }
 
+.range-toggle:hover {
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+}
+
+.range-toggle:active {
+  outline: 2px solid #83B3D3;
+  box-shadow: 0px 7px 15px 0px rgba(0, 0, 0, 0.40);
+}
+
+.range-toggle:focus:not(:active) {
+  outline: 3px solid #83B3D3;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+}
+
 .toggle-min {
   top: -10px;
   left: 0;
@@ -692,6 +751,15 @@ body {
 .filter-button {
   line-height: 36px;
   cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.filter-button:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.filter-button:focus:not(:active) {
+  outline: 3px solid #ffffff;
 }
 
 .filter-reset {
@@ -700,12 +768,23 @@ body {
   font-size: 18px;
   font-family: inherit;
   font-weight: 400;
-  text-align: center;
-  line-height: 36px;
+  align-self: center;
   border: none;
   border-radius: 4px;
-  padding: 7px 15px 6px;
+  padding: 3px 14px;
   cursor: pointer;
+}
+
+.filter-reset:hover {
+  opacity: 0.6;
+}
+
+.filter-reset:active {
+  opacity: 0.3;
+}
+
+.filter-reset:focus:not(:active) {
+  outline: 3px solid #83B3D3;
 }
 
 .hotel-sorting {
