@@ -444,6 +444,120 @@ body {
   color:#333333;
 }
 
+.modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(242, 242, 242, 0.80);
+}
+
+.modal {
+  position: relative;
+  background-color: #ffffff;
+  padding: 62px 70px;
+  margin: auto;
+}
+
+.modal-search {
+  width: 715px;
+  border-radius: 30px;
+}
+
+.modal-close-button {
+  position: absolute;
+  top: 54px;
+  right: 70px;
+  width: 53px;
+  height: 53px;
+  border: none;
+  border-radius: 50%;
+  padding: 0;
+}
+
+.modal-close-button::after {
+  content: "";
+  display: block;
+  background-image: url(../images/modal-close.svg);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  width: 53px;
+  height: 53px;
+}
+
+.modal-title {
+  margin: 0;
+  text-transform: uppercase;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 40px;
+  margin-bottom: 54px;
+}
+
+.modal-form-search {
+  display: grid;
+  row-gap: 40px;
+  grid-template-columns: 50% 1fr;
+  grid-template-rows: 50px 50px 50px 60px;
+}
+
+.modal-field-group {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  grid-template-rows: 50px;
+  column-gap: 15px;;
+  row-gap: 4px;
+}
+
+.modal-field-group-date {
+  grid-column: 1 / -1;
+}
+
+.field-title {
+  align-self: center;
+  font-weight: 700;
+}
+
+.field-title-info {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.modal-form-search-field {
+  border-radius: 4px;
+  padding: 13px 19px;
+}
+
+.modal-form-search-field:focus {
+  outline: 3px solid #83B3D3;
+  outline-offset: 0;
+}
+
+.modal-field-group .modal-form-search-field {
+  font-weight: 700;
+}
+
+.modal-field-group .modal-form-search-date {
+  background-image: url(../images/modal-date.svg);
+  background-repeat: no-repeat;
+  background-position: right 19px top 18px;
+}
+
+.field-message {
+  grid-column: 2 / -1;
+  font-size: 16px;
+}
+
+.field-message-error {
+  color: #FF5757;
+}
+
+.modal-form-search-button {
+  grid-column: 1 / -1;
+}
+
 .breadcrumbs-list {
   margin: 0;
   padding: 0;
@@ -1260,15 +1374,18 @@ body {
   font-family: inherit;
   font-size: 18px;
   border: 2px solid transparent;
-  border-radius: 10px 0 0 10px;
+}
+
+.subscribe-field {
   padding: 19px 19px;
+  border-radius: 10px 0 0 10px;
 }
 
 .field:hover {
   background-color: #E6E6E6;
 }
 
-.field:focus {
+.subscribe-field:focus {
   outline: 3px solid #615048;
   outline-offset: 0;
 }

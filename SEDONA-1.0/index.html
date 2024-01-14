@@ -120,7 +120,7 @@
           <form class="news-maling-form" action="https://echo.htmlacademy.ru/" method="post">
             <p class="news-maling">
               <label class="visually-hidden" for="news-maling-email">Email</label>
-              <input class="field" placeholder="Ваш e-mail" type="email" name="news-maling-email" id="news-maling-email" required>
+              <input class="subscribe-field field" placeholder="Ваш e-mail" type="email" name="news-maling-email" id="news-maling-email" required>
               <button class="news-maling-button button button-large" type="submit">Подписаться</button>
             </p>
           </form>
@@ -179,5 +179,36 @@
           </a>
         </section>
     </footer>
+    <div class="modal-container">
+      <div class="modal modal-search">
+        <button class="modal-close-button" type="button">
+          <span class="visually-hidden">Закрыть</span>
+        </button>
+        <section class="modal-content">
+          <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
+          <form class="modal-form-search">
+            <div class="modal-field-group modal-field-group-date">
+              <label class="field-title" for="date-in">Дата заезда:</label>
+              <input class="modal-form-search-field field modal-form-search-date" type="text" id="date-in" name="date-in" placeholder="Укажите дату" value="27 апреля 2020">
+              <span class="field-message field-message-error">Мы не можем отправить вас в прошлое.</span>
+            </div>
+            <div class="modal-field-group modal-field-group-date">
+              <label class="field-title" for="date-out">Дата выезда:</label>
+              <input class="modal-form-search-field field modal-form-search-date" type="text" id="date-out" name="date-out" placeholder="Укажите дату" value="1 сентября 2021">
+              <span class="field-message">На эти даты есть свободные номера. Пока есть.</span>
+            </div>
+            <div class="modal-field-group">
+              <label class="field-title" for="">Взрослые:</label>
+              <input class="modal-form-search-field field" type="number" id="" name="" placeholder="">
+            </div>
+            <div class="modal-field-group">
+              <label class="field-title field-title-info" for="">Дети:</label>
+              <input class="modal-form-search-field field" type="number" id="" name="" placeholder="">
+            </div>
+            <button class="modal-form-search-button button-large button" type="submit">Найти</button>
+          </form>
+        </section>
+      </div>
+    </div>
   </body>
 </html>
