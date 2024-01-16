@@ -197,14 +197,41 @@
               <input class="modal-form-search-field field modal-form-search-date" type="text" id="date-out" name="date-out" placeholder="Укажите дату" value="1 сентября 2021">
               <span class="field-message">На эти даты есть свободные номера. Пока есть.</span>
             </div>
-            <div class="modal-field-group">
-              <label class="field-title" for="">Взрослые:</label>
-              <input class="modal-form-search-field field" type="number" id="" name="" placeholder="">
+
+
+            <div class="modal-field-group search-form-amount">
+              <label class="field-title" for="adults">Взрослые:</label>
+              <div class="number">
+                <button class="number-button number-button-minus">
+                  <span class="visually-hidden">Уменьшить количество</span>
+                </button>
+                <input class="modal-form-search-field field number-input" type="number" id="adults" name="adults" placeholder="0" value="2">
+                <button class="number-button number-button-plus">
+                  <span class="visually-hidden">Увеличить количество</span>
+                </button>
+              </div>
             </div>
-            <div class="modal-field-group">
-              <label class="field-title field-title-info" for="">Дети:</label>
-              <input class="modal-form-search-field field" type="number" id="" name="" placeholder="">
+            <div class="modal-field-group search-form-amount">
+              <span class="field-title field-title-info">
+                <label  for="children">Дети:</label>
+                <span class="field-info">
+                  <span class="field-info-text">
+                    Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.
+                  </span>
+                </span>
+              </span>
+              <div class="number">
+                <button class="number-button number-button-minus">
+                  <span class="visually-hidden">Уменьшить количество</span>
+                </button>
+                <input class="modal-form-search-field field number-input" type="number" id="children" name="children" placeholder="0" value="1">
+                <button class="number-button number-button-plus">
+                  <span class="visually-hidden">Увеличить количество</span>
+                </button>
+              </div>
             </div>
+
+
             <button class="modal-form-search-button button-large button" type="submit">Найти</button>
           </form>
         </section>
