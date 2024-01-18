@@ -111,17 +111,17 @@
         <section class="search-hotel">
           <h2 class="visually-hidden">Поиск Гостиницы</h2>
           <p class="search-title">Заинтересовались?</p>
-          <p class="search-hotel-text">Укажите предполагаемые даты поездки,<br>и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+          <p class="search-text">Укажите предполагаемые даты поездки,<br>и мы покажем вам лучшие предложения гостиниц в Седоне</p>
           <a class="search-button button button-secondary button-large" href="search-hotel.html">Поиск гостиницы в Седоне</a>
         </section>
         <section class="maling maling-main">
           <h2 class="maling-title">Подпишитесь на рассылку</h2>
           <p class="maling-text">Только полезная информация и никакого спама,<br>честное бойскаутское!</p>
-          <form class="news-maling-form" action="https://echo.htmlacademy.ru/" method="post">
-            <p class="news-maling">
+          <form class="maling-form" action="https://echo.htmlacademy.ru/" method="post">
+            <p class="maling-field">
               <label class="visually-hidden" for="news-maling-email">Email</label>
               <input class="subscribe-field field" placeholder="Ваш e-mail" type="email" name="news-maling-email" id="news-maling-email" required>
-              <button class="news-maling-button button button-large" type="submit">Подписаться</button>
+              <button class="maling-button button button-large" type="submit">Подписаться</button>
             </p>
           </form>
         </section>
@@ -157,12 +157,12 @@
             </li>
           </ul>
           <h2 class="visually-hidden">Номер для связи</h2>
-          <address class="footer-number-address">
-            <a class="footer-number-address-tel" href="+78128121212">+7 (812) 812-12-12</a>
+          <address class="footer-number">
+            <a class="footer-number-tel" href="+78128121212">+7 (812) 812-12-12</a>
           </address>
           <h2 class="visually-hidden">Спонсор сайта</h2>
-          <a class="footer-sponsor-logo-link" href="https://htmlacademy.ru/">
-            <svg class="footer-sponsor-logo-pic" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="116" height="34" viewBox="0 0 116 34">
+          <a class="footer-sponsor-link" href="https://htmlacademy.ru/">
+            <svg class="footer-sponsor-pic" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="116" height="34" viewBox="0 0 116 34">
               <path d="M0.550171 13.4498V16.0498H3.05017V13.4498H0.550171Z"/>
               <path d="M12.1506 5.0498C10.5506 5.0498 9.35056 5.7498 8.55056 6.7498H8.45056V0.549805H6.45056V16.0498H8.45056V10.7498C8.45056 8.64981 9.75056 7.1498 11.7506 7.1498C13.5506 7.1498 14.6506 8.5498 14.6506 10.3498V16.0498H16.6506V9.9498C16.7506 6.9498 14.8506 5.0498 12.1506 5.0498Z"/>
               <path d="M27.1506 5.3499H22.3506V1.6499H20.3506V5.4499H18.4506V7.4499H20.3506V13.4499C20.3506 15.1499 21.3506 16.1499 23.0506 16.1499H27.1506V14.1499H23.4506C22.7506 14.1499 22.3506 13.7499 22.3506 13.0499V7.3499H27.1506V5.3499Z"/>
@@ -186,32 +186,34 @@
         </button>
         <section class="modal-content">
           <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
-          <form class="modal-form-search">
-            <div class="modal-field-group modal-field-group-date">
+
+          <form class="modal-form">
+            <div class="modal-form-group modal-form-date">
               <label class="field-title" for="date-in">Дата заезда:</label>
-              <input class="modal-form-search-field field modal-form-search-date" type="text" id="date-in" name="date-in" placeholder="Укажите дату" value="27 апреля 2020">
+              <input class="modal-form-field field modal-date-pic" type="text" id="date-in" name="date-in" placeholder="Укажите дату" value="27 апреля 2020">
               <span class="field-message field-message-error">Мы не можем отправить вас в прошлое.</span>
             </div>
-            <div class="modal-field-group modal-field-group-date">
+
+            <div class="modal-form-group modal-form-date">
               <label class="field-title" for="date-out">Дата выезда:</label>
-              <input class="modal-form-search-field field modal-form-search-date" type="text" id="date-out" name="date-out" placeholder="Укажите дату" value="1 сентября 2021">
+              <input class="modal-form-field field modal-date-pic" type="text" id="date-out" name="date-out" placeholder="Укажите дату" value="1 сентября 2021">
               <span class="field-message">На эти даты есть свободные номера. Пока есть.</span>
             </div>
 
-
-            <div class="modal-field-group search-form-amount">
+            <div class="modal-form-group search-form-amount">
               <label class="field-title" for="adults">Взрослые:</label>
               <div class="number">
-                <button class="number-button number-button-minus">
+                <button class="number-button number-button-minus" type="button">
                   <span class="visually-hidden">Уменьшить количество</span>
                 </button>
-                <input class="modal-form-search-field field number-input" type="number" id="adults" name="adults" placeholder="0" value="2">
-                <button class="number-button number-button-plus">
+                <input class="modal-form-field field number-input" type="number" id="adults" name="adults" placeholder="0" value="2">
+                <button class="number-button number-button-plus" type="button">
                   <span class="visually-hidden">Увеличить количество</span>
                 </button>
               </div>
             </div>
-            <div class="modal-field-group search-form-amount">
+
+            <div class="modal-form-group search-form-amount">
               <span class="field-title field-title-info">
                 <label  for="children">Дети:</label>
                 <span class="field-info">
@@ -221,18 +223,18 @@
                 </span>
               </span>
               <div class="number">
-                <button class="number-button number-button-minus">
+                <button class="number-button number-button-minus" type="button">
                   <span class="visually-hidden">Уменьшить количество</span>
                 </button>
-                <input class="modal-form-search-field field number-input" type="number" id="children" name="children" placeholder="0" value="1">
-                <button class="number-button number-button-plus">
+                <input class="modal-form-field field number-input" type="number" id="children" name="children" placeholder="0" value="1">
+                <button class="number-button number-button-plus" type="button">
                   <span class="visually-hidden">Увеличить количество</span>
                 </button>
               </div>
             </div>
 
 
-            <button class="modal-form-search-button button-large button" type="submit">Найти</button>
+            <button class="modal-form-button button-large button" type="submit">Найти</button>
           </form>
         </section>
       </div>
