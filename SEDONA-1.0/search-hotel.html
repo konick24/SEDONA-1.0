@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Search hotel Sedona</title>
+    <link rel="icon" type="images/png" sizes="32x32" href="images/favicon.png">
     <link rel="stylesheet" href="./css/style.css">
   </head>
   <body>
@@ -27,7 +28,7 @@
         <ul class="navigation-list navigation-user">
           <li class="navigation-item">
             <a href="#" class="navigation-user-link">
-              <svg class="icon-button" aria-hidden="true" focusable="false" width="19" height="19" xmlns="http://www.w3.org/2000/svg" width="20" height="19">
+              <svg class="icon-button" aria-hidden="true" focusable="false" width="19" height="19" xmlns="http://www.w3.org/2000/svg">
                 <path  d="m19.026 17.05-3.71-3.7c1.002-1.3 1.704-3 1.704-4.9 0-4.4-3.61-8-8.023-8C4.585.45.975 4.15.975 8.55c0 4.4 3.61 8 8.022 8 1.805 0 3.51-.6 4.914-1.7l3.71 3.7 1.405-1.5Zm-10.029-2.5c-3.309 0-6.017-2.7-6.017-6s2.708-6 6.017-6c3.31 0 6.017 2.7 6.017 6s-2.707 6-6.017 6Z"/>
               </svg>
               <span class="visually-hidden">Поиск</span>
@@ -35,7 +36,7 @@
           </li>
           <li class="navigation-item">
             <a href="#" class="navigation-user-link">
-              <svg class="icon-button" aris-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="19" height="17">
+              <svg class="icon-button" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="19" height="17">
                 <path d="M9.444 17c-.301 0-.602-.1-.802-.4-5.416-6.1-6.72-7.5-7.02-7.9C.92 7.8.519 6.6.519 5.4c0-3 2.406-5.4 5.515-5.4 1.304 0 2.507.5 3.51 1.3C10.547.5 11.851 0 13.054 0c3.008 0 5.516 2.4 5.516 5.4 0 1.3-.502 2.5-1.304 3.4l-7.02 7.9c-.2.2-.401.3-.802.3ZM3.427 7.5c.3.4 3.51 4 6.117 6.9l6.218-7c.501-.5.702-1.2.702-2 0-1.8-1.505-3.3-3.31-3.3-1.002 0-2.005.5-2.707 1.3-.301.3-.602.4-.903.4-.3 0-.602-.2-.802-.4-.702-.8-1.705-1.3-2.708-1.3-1.805 0-3.31 1.5-3.31 3.3-.1.9.302 1.6.703 2.1-.1 0-.1 0 0 0Z"/>
               </svg>
               <span class="visually-hidden">Избранное</span>
@@ -52,23 +53,21 @@
     <main class="main-search-hotel">
       <div class="page-container">
         <div class="main-header">
-          <header class="search-hotel-header">
-            <h1 class="search-hotel-title">Гостиницы Седоны</h1>
-            <ul class="breadcrumbs-list">
-              <li class="breadcrumbs-item">
-                <a class="breadcrumbs-item-link" href="index.html">
-                  <svg class="search-icon-button" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12">
-                    <path d="M6 .3 0 5.8V12h12V5.8L6 .3ZM11 11H1V6.2l5-4.5 5 4.5V11Z"/>
-                    <path d="M4 10h1V7.5h2V10h1V6.5H4V10Z"/>
-                  </svg>
-                  <span class="visually-hidden">Главная</span>
-                </a>
-              </li>
-              <li class="breadcrumbs-item">
-                <a class="breadcrumbs-item-link">Гостиницы</a>
-              </li>
-            </ul>
-          </header>
+          <h1 class="search-hotel-title">Гостиницы Седоны</h1>
+          <ul class="breadcrumbs-list">
+            <li class="breadcrumbs-item">
+              <a class="breadcrumbs-item-link" href="index.html">
+                <svg class="search-icon-button" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12">
+                  <path d="M6 .3 0 5.8V12h12V5.8L6 .3ZM11 11H1V6.2l5-4.5 5 4.5V11Z"/>
+                  <path d="M4 10h1V7.5h2V10h1V6.5H4V10Z"/>
+                </svg>
+                <span class="visually-hidden">Главная</span>
+              </a>
+            </li>
+            <li class="breadcrumbs-item">
+              <a class="breadcrumbs-item-link">Гостиницы</a>
+            </li>
+          </ul>
           <section class="search-hotel-products">
             <h2 class="visually-hidden">Список гостиниц с фильтрами</h2>
             <form class="hotel-filter" action="https://echo.htmlacademy.ru/" method="post">
@@ -206,7 +205,7 @@
                   Amara Resort & Spa
                 </h4>
               </a>
-              <img class="hotel-card-photo" src="./images/hotel/hotel-1.jpg" alt="Фото гостиницы в коньёне">
+              <img class="hotel-card-photo" src="./images/hotel/hotel-1.jpg" width="300" height="206" alt="Фото гостиницы в коньёне">
               <p class="hotel-card-description">
                 <span class="hotel-card-description-text">Гостиница</span>
                 <span class="hotel-card-description-text">От 4000 ₽</span>
@@ -224,7 +223,7 @@
                   Desert Quail Inn
                 </h4>
               </a>
-              <img class="hotel-card-photo" src="./images/hotel/hotel-2.jpg" alt="Фото отеля в фоне коньёна">
+              <img class="hotel-card-photo" src="./images/hotel/hotel-2.jpg" width="300" height="206" alt="Фото отеля на фоне коньёна">
               <p class="hotel-card-description">
                 <span class="hotel-card-description-text">Гостиница</span>
                 <span class="hotel-card-description-text">От 3000 ₽</span>
@@ -242,7 +241,7 @@
                   Villas at Poco Diablo
                 </h4>
               </a>
-              <img class="hotel-card-photo" src="./images/hotel/hotel-3.jpg" alt="Фото коньёна">
+              <img class="hotel-card-photo" src="./images/hotel/hotel-3.jpg" width="300" height="206" alt="Фото коньёна">
               <p class="hotel-card-description">
                 <span class="hotel-card-description-text">Гостиница</span>
                 <span class="hotel-card-description-text">От 2000 ₽</span>
@@ -260,7 +259,7 @@
                   GreenTree Inn
                 </h4>
               </a>
-              <img class="hotel-card-photo" src="./images/hotel/hotel-4.jpg" alt="Фото дороги проходящей через лес">
+              <img class="hotel-card-photo" src="./images/hotel/hotel-4.jpg" width="300" height="206" alt="Фото дороги проходящей через лес">
               <p class="hotel-card-description">
                 <span class="hotel-card-description-text">Гостиница</span>
                 <span class="hotel-card-description-text">От 3000 ₽</span>
@@ -322,9 +321,9 @@
           </div>
         </section>
         <section class="maling">
-          <h2 class="maling-title">Подпишитесь на рассылку</h2>
+          <h2 class="maling-title maling-catalog-title">Подпишитесь на рассылку</h2>
           <p class="maling-text">Только полезная информация и никакого спама,<br>честное бойскаутское!</p>
-          <form class="maling-form" action="https://echo.htmlacademy.ru/" method="post">
+          <form class="maling-form maling-catalog-form" action="https://echo.htmlacademy.ru/" method="post">
               <p class="maling-field">
                   <label class="visually-hidden" for="news-maling-email">Email</label>
                   <input class="subscribe-field field" placeholder="Ваш e-mail" type="email" name="news-maling-email" id="news-maling-email" required>
