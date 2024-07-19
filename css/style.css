@@ -837,6 +837,10 @@ img {
   background-image: url("../images/plus.svg");
 }
 
+.modal-hide {
+  display: none;
+}
+
 .field-info {
   position: relative;
   width: 25px;
